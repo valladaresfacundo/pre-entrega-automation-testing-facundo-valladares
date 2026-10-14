@@ -15,11 +15,11 @@ CARPETA_SCREENSHOTS = Path(__file__).parent / "reports" / "screenshots"
 
 @pytest.fixture
 def driver():
-    """Abre un Chrome nuevo para cada test (los tests son independientes entre sí)."""
+    """Abre un Chrome nuevo para cada test (los tests son independientes entre si)."""
     opciones = webdriver.ChromeOptions()
     opciones.add_argument("--incognito")
     opciones.add_argument("--window-size=1366,900")
-    # Evita el aviso de Chrome "cambiá tu contraseña", que tapa la página después del login
+    # Evita el aviso de Chrome "cambia tu contraseña", que tapa la pagina despues del login
     opciones.add_experimental_option("prefs", {
         "credentials_enable_service": False,
         "profile.password_manager_enabled": False,
@@ -35,7 +35,7 @@ def driver():
 
 @pytest.fixture
 def inventario(driver):
-    """Deja la sesión iniciada y devuelve la página de inventario lista para usar."""
+    """Deja la sesion iniciada y devuelve la pagina de inventario lista para usar."""
     login_page = LoginPage(driver)
     login_page.abrir()
     login_page.login()

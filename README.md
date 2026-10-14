@@ -1,39 +1,30 @@
-# Pre-entrega: Automatización QA (saucedemo.com)
+# Pre-entrega: Automatizacion QA -(saucedemo.com) facundo valladares
 
 **Autor:** Facundo Valladares
 
-## Propósito del proyecto
+## Proposito del proyecto
+Proyecto de automatizacion de pruebas realizado con Python, Selenium WebDriver y Pytest
 
-Automatizar flujos básicos de navegación web sobre [saucedemo.com](https://www.saucedemo.com), un sitio demo para prácticas de testing, aplicando lo visto hasta la Clase 8 del curso:
+El objetivo del proyecto es automatizar distintas pruebas funcionales de una aplicacion web
 
 - **Login:** ingresar con credenciales válidas y validar la redirección al inventario.
 - **Catálogo:** validar el título de la página, que haya productos visibles, el nombre y precio del primer producto, y que estén los elementos principales de la interfaz (menú, filtro, carrito).
 
-## Tecnologías utilizadas
+## Tecnologías usadas
+- Python
+- Selenium WebDriver
+- Pytest
+- Pytest HTML
+- Git
 
-- **Python 3.13**: lenguaje principal.
-- **Selenium WebDriver**: automatización del navegador (Google Chrome).
-- **Pytest**: estructura y ejecución de los tests (fixtures en `conftest.py`).
-- **pytest-html**: reporte HTML de la ejecución.
-- **Git y GitHub**: control de versiones.
+## Instalación de dependencias
+A continuación se detalla la forma de instalar las distintas dependencias:
+- Python: descargar el ejecutable desde https://www.python.org/downloads/
+- Selenium WebDriver: ejecutar en terminal de VS Code "pip install selenium"
+- Pytest: ejecutar en terminal de VS Code "pip install pytest"
+- Pytest HTML: ejecutar en terminal de VS Code "pip install pytest-html"
+- Git: descargar el ejecutable desde https://git-scm.com/
 
-## Estructura del proyecto
-
-```
-├── tests/
-│   ├── test_login.py         # Login exitoso: /inventory.html + "Products" + "Swag Labs"
-│   └── test_inventory.py     # Título, productos, nombre/precio del primero, menú y filtros
-├── utils/
-│   ├── login_page.py         # Page Object del login (con esperas explícitas)
-│   └── inventory_page.py     # Page Object del inventario
-├── reports/
-│   ├── reporte.html          # Reporte HTML generado por pytest-html
-│   ├── ejecucion.log         # Log de la última ejecución
-│   └── screenshots/          # Capturas automáticas de los tests que fallan
-├── conftest.py               # Fixtures: navegador, login y captura en fallos
-├── pytest.ini                # Configuración de pytest y de los logs
-└── requirements.txt          # Dependencias
-```
 
 ### Decisiones de diseño
 
@@ -44,7 +35,11 @@ Automatizar flujos básicos de navegación web sobre [saucedemo.com](https://www
 
 ## Instalación
 
-Requisitos: Python 3.10 o superior, Google Chrome y Git. Selenium 4 descarga el driver de Chrome solo, no hace falta instalar ChromeDriver.
+- git init
+- git commit -m "v1.0"
+- git branch -M main
+- git remote add origin https://github.com/valladaresfacundo/pre-entrega-automation-testing-facundo-valladares.git
+- git push -u origin main
 
 ```bash
 git clone https://github.com/valladaresfacundo/pre-entrega-automation-testing-facundo-valladares.git
